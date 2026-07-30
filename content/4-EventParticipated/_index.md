@@ -1,9 +1,9 @@
 ---
 title: "Events Participated"
 date: 2026-06-05
-weight: 4
+weight: 3
 chapter: false
-pre: " <b> 4. </b> "
+pre: " <b> 3. </b> "
 ---
 
 Throughout my internship at the First Cloud AI Journey program, I actively participated in three enriching events organized by the AWS Vietnam community and the internship team. These events provided invaluable insights into real-world IT operations, team collaboration, and cloud expertise. Below is a detailed breakdown of each event.
