@@ -1,39 +1,38 @@
 ---
 title: "Self-Assessment"
-date: 2024-01-01
+date: 2026-06-05
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+During my internship at **First Cloud AI Journey (AWS Vietnam)** from **June 5, 2026** to **August 15, 2026**, I had the opportunity to apply my academic machine learning knowledge to a practical, production-oriented real-world environment.
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+I participated in a **Local AQI Forecasting & Alert System** project as the **ML Engineer (M3)**. My primary responsibilities included setting up SageMaker Processing jobs for data cleaning, feature engineering, implementing DeepAR time-series models, and deploying the final optimized model to a SageMaker Endpoint for real-time inference. This journey significantly enhanced my proficiency in AWS ML services, Python data processing, and end-to-end MLOps workflows.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+In terms of work ethic, I consistently met sprint deadlines, proactively researched optimization strategies (like Hyperparameter Tuning and Spot Instances), and collaborated closely with the Data Engineer (M2) and Backend Engineer (M4) to ensure seamless system integration.
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+To objectively reflect on my internship performance, I evaluate myself based on the following criteria:
 
 | No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
 | --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Ability to absorb new knowledge and learn quickly                                                | ☐    | ✅    | ☐       |
-| 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ☐    | ☐    | ✅       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    | ✅    | ☐       |
-| 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
+| 1   | **Professional knowledge & skills** | Deep understanding of AWS SageMaker, DeepAR, time-series modeling, and Python/Pandas.             | ✅    | ☐    | ☐       |
+| 2   | **Ability to learn**                | Rapidly absorbed new Deep Learning concepts and successfully applied HPO strategies.             | ✅    | ☐    | ☐       |
+| 3   | **Proactiveness**                   | Took initiative to research model optimization and cost-reduction techniques (Spot Instances).  | ✅    | ☐    | ☐       |
+| 4   | **Sense of responsibility**         | Always completed assigned ML tasks on time with high-quality model artifacts and documentation. | ✅    | ☐    | ☐       |
+| 5   | **Discipline**                      | Strictly adhered to team sync-up schedules, Git workflows, and professional workplace rules.    | ✅    | ☐    | ☐       |
+| 6   | **Progressive mindset**             | Actively received mentor feedback on model performance and iteratively improved the RMSE.        | ✅    | ☐    | ☐       |
+| 7   | **Communication**                   | Presented technical ideas and model results clearly to the team and mentors.                    | ☐    | ✅    | ☐       |
+| 8   | **Teamwork**                        | Effectively cooperated with M2 (Data) and M4 (Backend) for a successful end-to-end integration. | ✅    | ☐    | ☐       |
+| 9   | **Professional conduct**            | Maintained a respectful attitude towards colleagues, mentors, and the work environment.         | ✅    | ☐    | ☐       |
+| 10  | **Problem-solving skills**          | Identified and resolved issues related to data formatting and DeepAR convergence.                | ✅    | ☐    | ☐       |
+| 11  | **Contribution to project/team**    | Delivered a fully optimized SageMaker Endpoint and ensured the forecasting engine ran smoothly. | ✅    | ☐    | ☐       |
+| 12  | **Overall**                         | General evaluation of the 10-week professional ML internship experience.                        | ✅    | ☐    | ☐       |
 
 ### Needs Improvement
 
-* Strengthen discipline and strictly comply with the rules and regulations of the company or any organization  
-* Improve problem-solving thinking  
-* Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+To continue growing as an ML Engineer, I have identified the following areas for further development:
+
+* **Enhance Technical Presentation Skills:** While I am comfortable coding and building models, I aim to further improve my ability to break down complex MLOps architectures and ML concepts into clear, simple presentations for non-technical stakeholders.
+* **Deepen Cost-Performance Optimization:** I successfully used Spot Instances to reduce costs, but I want to explore advanced SageMaker optimization techniques (like Neo compilation or multi-model endpoints) to further balance inference latency with AWS expenses.
+* **Expand MLOps & Automation Knowledge:** My project involved manual pipeline steps. In the future, I plan to master advanced SageMaker Pipelines and Feature Store features to build fully automated retraining and feature management systems.
