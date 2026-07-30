@@ -1,9 +1,9 @@
 ---
 title: "Chia sẻ và Phản hồi"
 date: 2026-06-05
-weight: 7
+weight: 6
 chapter: false
-pre: " <b> 7. </b> "
+pre: " <b> 6. </b> "
 ---
 
 First Cloud AI Journey (FCAJ) đã mang lại cho tôi một trong những trải nghiệm thực tập đáng nhớ và ý nghĩa nhất cuộc đời sinh viên. Nhìn lại 10 tuần đã qua, tôi thực sự biết ơn khi được là một phần của chương trình này. Dưới đây là những cảm nhận chi tiết về hành trình của tôi.
