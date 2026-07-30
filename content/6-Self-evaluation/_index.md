@@ -1,9 +1,9 @@
 ---
 title: "Self-Assessment"
 date: 2026-06-05
-weight: 6
+weight: 5
 chapter: false
-pre: " <b> 6. </b> "
+pre: " <b> 5. </b> "
 ---
 
 During my internship at **First Cloud AI Journey (AWS Vietnam)** from **June 5, 2026** to **August 15, 2026**, I had the opportunity to apply my academic machine learning knowledge to a practical, production-oriented real-world environment.
