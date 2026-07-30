@@ -1,58 +1,28 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-07-06
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Triển khai các mô hình ML đã huấn luyện lên SageMaker Endpoint để suy luận thời gian thực.
+* Thực hiện và kiểm tra Batch Transform job cho suy luận ngoại tuyến.
+* Cấu hình chính sách Auto Scaling và Model Variants (A/B testing) để sẵn sàng cho môi trường sản xuất.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc                                                                                                                                           | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 34  | - Nghiên cứu kiến trúc Inference của SageMaker. <br> - Triển khai mô hình tốt nhất lên Endpoint thời gian thực. <br> - Kiểm tra API endpoint với payload mẫu. | 06/07/2026   | 07/07/2026      | <https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html> |
+| 35  | - Cấu hình và chạy Batch Transform job để xử lý tập dữ liệu lớn hiệu quả. <br> - So sánh chi phí và hiệu năng giữa suy luận thời gian thực và Batch.      | 08/07/2026   | 08/07/2026      |
+| 36  | - Cấu hình chính sách Auto Scaling cho endpoint dựa trên độ trễ yêu cầu. <br> - Khám phá Model Variants cho các bản triển khai A/B.                     | 09/07/2026   | 10/07/2026      |
+| 37  | - Tạo và cấu hình Endpoint Config với chiến lược blue/green deployment. <br> - Chạy kiểm tra tải trên endpoint đã triển khai. <br> - Tài liệu hóa thiết lập triển khai. | 11/07/2026   | 12/07/2026      |
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thể hiện chuyên môn trong việc triển khai các mô hình ML lên môi trường sản xuất của AWS.
+* Tạo và kiểm tra thành công SageMaker Endpoint hoạt động, đảm bảo độ trễ dưới 100ms mỗi lần suy luận.
+* Triển khai các Batch Transform job để xử lý dữ liệu theo lô, giảm chi phí cho tác vụ ngoại tuyến.
+* Cấu hình chính sách auto-scaling và hiểu các nguyên tắc cơ bản của thử nghiệm A/B với Variants của SageMaker cho các bản cập nhật mô hình đáng tin cậy.
