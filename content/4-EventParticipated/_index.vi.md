@@ -1,9 +1,9 @@
 ---
 title: "Các sự kiện đã tham gia"
 date: 2026-06-05
-weight: 4
+weight: 3
 chapter: false
-pre: " <b> 4. </b> "
+pre: " <b> 3. </b> "
 ---
 
 Trong suốt quá trình thực tập tại chương trình First Cloud AI Journey, tôi đã tích cực tham gia ba sự kiện ý nghĩa do cộng đồng AWS Vietnam và ban tổ chức thực tập triển khai. Những buổi gặp gỡ này đã mang lại những hiểu biết quý giá về vận hành IT thực tế, tinh thần đồng đội và chuyên môn Cloud. Dưới đây là chi tiết các sự kiện.
