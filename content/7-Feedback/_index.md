@@ -1,9 +1,9 @@
 ---
 title: "Sharing and Feedback"
 date: 2026-06-05
-weight: 7
+weight: 6
 chapter: false
-pre: " <b> 7. </b> "
+pre: " <b> 6. </b> "
 ---
 
 First Cloud AI Journey (FCAJ) has given me one of the most memorable and meaningful experiences of my life. Looking back on my 10-week internship, I am truly grateful to be a part of this program. Below are my detailed feelings and feedback based on my journey.
