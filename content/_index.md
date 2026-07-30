@@ -19,9 +19,9 @@ chapter: false
 
 &emsp; **Email:** tuong.do10012005@hcmut.edu.vn
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** Ho Chi Minh City University of Technology - Vietnam National University Ho Chi Minh City
 
-&emsp; **Major:** Information Technology
+&emsp; **Major:** Computer Science
 
 &emsp; **Class:** AWS062026
 
