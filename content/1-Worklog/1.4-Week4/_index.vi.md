@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2026-06-22
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Giới thiệu về khái niệm Tối ưu siêu tham số (HPO) với SageMaker.
+* Thiết lập và chạy HPO job bằng chiến lược Bayesian và Random Search.
+* Phân tích kết quả tối ưu và rút ra bộ siêu tham số tối ưu nhất.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc                                                                                                                                           | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 23  | - Nghiên cứu kiến trúc HPO của SageMaker. <br> - Xác định không gian tìm kiếm siêu tham số (phạm vi cho learning rate, max_depth, v.v.).              | 22/06/2026   | 23/06/2026      | <https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html> |
+| 24  | - Cấu hình HPO job sử dụng HyperparameterTuner. <br> - Gửi tuning job để khởi chạy nhiều training job đồng thời.                                       | 24/06/2026   | 24/06/2026      |
+| 25  | - Giám sát tiến trình HPO. <br> - Phân tích chỉ số mô hình và phân phối siêu tham số. <br> - Truy xuất artifact mô hình tốt nhất.                     | 25/06/2026   | 26/06/2026      |
+| 26  | - Đào tạo lại mô hình tốt nhất với tham số tối ưu trên toàn bộ tập dữ liệu. <br> - Xác thực cải thiện hiệu suất so với baseline trước đó.               | 27/06/2026   | 28/06/2026      |
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Có hiểu biết sâu sắc về tính năng điều chỉnh mô hình tự động và các kỹ thuật tối ưu nâng cao.
+* Xây dựng và thực thi thành công HPO job trên SageMaker, sử dụng tối ưu hóa Bayesian để tìm kiếm không gian tham số hiệu quả.
+* Phân tích log HPO và xác định các siêu tham số tác động mạnh nhất đến hiệu suất.
+* Đạt được cải thiện đáng kể về chỉ số chính (ví dụ: giảm RMSE) so với mô hình baseline.
