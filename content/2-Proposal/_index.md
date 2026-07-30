@@ -1,115 +1,104 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-06-05
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+In this section, you will find the comprehensive proposal for the 4-week capstone project: **Local AQI Forecasting & Alert System**. The project is designed as an end-to-end Machine Learning pipeline on the AWS platform, simulating a real-world IoT environment to predict Air Quality Index (AQI) and send early warnings to users.
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# Local AQI Forecasting & Alert System
+## A Unified AWS Solution for Real-Time Air Quality Monitoring and Predictive Alerting
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+The **Local AQI Forecasting & Alert System** is a collaborative 4-week project conducted by a team of 5 interns at the First Cloud AI Journey (AWS). The system is designed to simulate an environmental monitoring network using public data sources (OpenAQ). It leverages AWS IoT Core for data ingestion, Kinesis Data Firehose for streaming, and Amazon S3 as a central Data Lake. At the core of the system is a **Machine Learning pipeline** using Amazon SageMaker to process raw data and train a **DeepAR** time-series forecasting model. The trained model is deployed as a SageMaker Endpoint, enabling a FastAPI backend to fetch forecasts and trigger real-time alerts via Amazon SNS when AQI thresholds are breached. This solution demonstrates a complete serverless-capable, end-to-end MLOps workflow within a condensed timeframe.
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+#### What’s the Problem?
+Air pollution is a critical urban issue. However, local communities often rely on delayed, third-party reports which lack actionable, granular, and real-time forecasting. There is a pressing need for a localized system that not only monitors historical AQI data but also intelligently predicts future pollution spikes and proactively alerts residents.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+#### The Solution
+Our solution builds a simulated sensor network (using OpenAQ historical data) that stream data into AWS. The pipeline consists of:
+1.  **Data Ingestion:** Simulated IoT devices publish MQTT messages to AWS IoT Core and Kinesis Data Firehose, landing raw data into an S3 Data Lake.
+2.  **Data Processing & ML:** SageMaker Processing Jobs clean and feature-engineer the data, which is then used to train a **DeepAR** model for time-series forecasting.
+3.  **Deployment & Alerting:** The optimized model is deployed as a real-time SageMaker Endpoint. A FastAPI backend queries this endpoint to get AQI predictions (24-48 hours ahead). When the forecast exceeds safety thresholds, the system sends SMS/Email alerts to subscribed users via Amazon SNS.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+#### Benefits and Return on Investment
+- **Real-time Automation:** Replaces static manual reports with dynamic, automated forecasts.
+- **Public Safety:** Enables proactive safety measures through early warnings before pollution spikes occur.
+- **Scalability:** The serverless-centric architecture can easily scale to accommodate hundreds of new simulated stations (sensors) without provisioning heavy infrastructure.
+- **Cost Efficiency:** Leveraging serverless services (Auto Scaling Spot Instances for training, S3 lifecycle policies) ensures costs remain low for a prototype, proving the viability of the solution.
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+The system employs a 5-module architecture, fully orchestrated on AWS over a 4-week period.
+1.  **Ingestion:** OpenAQ data is simulated and published to AWS IoT Core / MQTT EC2 Broker by M1.
+2.  **Storage:** M2 sets up Kinesis Data Firehose to stream data into the `raw/` zone of the S3 bucket.
+3.  **Processing & ML:** M3 (ML Engineer) utilizes SageMaker Processing Jobs for data cleaning and feature engineering. The clean data is used to train a DeepAR model via SageMaker Estimators. Hyperparameter tuning is applied to optimize RMSE. The final model is deployed as a SageMaker Endpoint.
+4.  **Backend & Alert:** M4 develops a FastAPI Backend on EC2 to subscribe to the SageMaker Endpoint, and integrates logic to trigger Amazon SNS notifications upon threshold breaches.
+5.  **DevOps & QA:** M5 manages the IAM roles/VPC security, sets up CloudWatch monitoring, and conducts end-to-end integration testing.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
-
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+![Local AQI System Architecture](/images/2-Proposal/aqi_architecture.jpeg)
+*(Note: Please replace with your actual architecture diagram image)*
 
 ### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
-
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+- **AWS IoT Core / EC2 (MQTT Broker):** Manages the ingestion endpoint for simulated environmental sensors.
+- **Kinesis Data Firehose:** Enables reliable streaming data delivery to S3.
+- **Amazon S3:** Serves as the centralized Data Lake for raw data, processed data, and model artifacts.
+- **Amazon SageMaker:** Handles Data Processing Jobs, DeepAR model training, Hyperparameter Tuning (HPO), and Model Deployment to a real-time Endpoint.
+- **FastAPI (on EC2):** Hosts the backend API logic for user subscription and AQI forecast retrieval.
+- **Amazon SNS:** Manages the SMS and Email alerting system for high-risk AQI events.
+- **Amazon CloudWatch & IAM:** Monitors system health and enforces secure, least-privilege role-based access.
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+**Implementation Phases (4-Week Internship)**
+The project is split into parallel but interconnected streams, with weekly sync-ups:
+- **Week 1:** Setup IAM/VPC, establish S3 Data Lake, simulate data ingestion pipeline with IoT Core, and perform initial EDA on SageMaker notebooks.
+- **Week 2:** Execute SageMaker Processing Jobs to clean and format time-series data. Train the initial DeepAR baseline model. Begin developing the FastAPI skeleton.
+- **Week 3:** Tune hyperparameters (HPO) for DeepAR to maximize accuracy. Deploy the best model to a SageMaker Endpoint and fully integrate it with the FastAPI backend to enable the end-to-end flow.
+- **Week 4:** Complete comprehensive end-to-end testing. Finalize technical documentation and prepare the final presentation/demo.
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+**Technical Requirements (As an ML Engineer - M3)**
+- **Deep Learning Framework:** In-depth knowledge of PyTorch/TensorFlow and the specific SageMaker DeepAR container.
+- **ML Modeling:** Experience configuring SageMaker Estimators, handling time-series datasets, and performing Hyperparameter Optimization (HPO) to minimize RMSE/MAE.
+- **Deployment:** Ability to deploy a trained model as a SageMaker Endpoint for real-time inference.
+- **Inter-team Communication:** Regular coordination with M2 (to receive clean data) and M4 (to deliver the endpoint for API consumption).
 
 ### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+- **End of Week 1:** Demonstrate a working data ingestion flow: Simulated sensors -> S3 raw bucket.
+- **End of Week 2:** Deliver the clean dataset and a working baseline DeepAR model generating preliminary forecasts. Backend subscribe function tested with SNS.
+- **End of Week 3:** Successfully demonstrate the end-to-end flow: Real-time data ingestion -> SageMaker Endpoint Forecast -> Backend detects threshold -> SNS sends alert.
+- **End of Week 4:** Final project presentation to the committee and submission of full technical documentation.
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
-
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
-
-Total: $0.7/month, $8.40/12 months
-
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+The project utilizes a Free Tier-friendly architecture where possible. The primary estimated costs are for the duration of the 4-week internship:
+- **SageMaker Training & Endpoint:** `ml.m5.xlarge` and `ml.g4dn.xlarge` (GPU for DeepAR) instances (approx. $0.50 - $1.50/hour, billed only for training/deployment time).
+- **Amazon S3:** Minimal storage costs (< $0.10 for the 4-week trial).
+- **Kinesis Data Firehose:** $0.03 per GB ingested (very low for simulation).
+- **EC2 & NAT Gateway:** ~$0.20/day for backend hosting.
+- **Total Estimated Cost:** Under **$20** for the entire development and testing lifecycle, which is strictly controlled and optimized by the DevOps (M5).
 
 ### 7. Risk Assessment
 #### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+- **Model Overfitting / Poor Accuracy:** High Impact, Medium Probability.
+- **Sudden Cost Spikes (SageMaker Endpoint):** Medium Impact, Low Probability.
+- **Network Timeouts in Data Ingestion:** Medium Impact, Low Probability.
 
 #### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+- **Model:** Implement early-stopping and efficient HPO strategies.
+- **Cost:** Set up strict CloudWatch Budget Alerts ($5 threshold) to halt training jobs immediately.
+- **Network:** Implement robust retry mechanisms in the ingestion script.
 
 #### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+- If DeepAR fails to converge, fall back to XGBoost or Linear Learner as a statistical baseline.
+- Use local-mode SageMaker training to test scripts before committing to cloud training costs.
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
+#### Technical Outcomes
+- A fully automated, real-time AQI forecasting pipeline.
+- A deployed SageMaker Endpoint accessible via FastAPI for 24-48 hour predictions.
+- A scalable alert system capable of sending notifications to multiple subscribers via Amazon SNS.
+
 #### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+- Serves as a production-level prototype for smart city environmental monitoring.
+- Provides a robust data pipeline foundation for future AI/ML research into pollution source identification.
