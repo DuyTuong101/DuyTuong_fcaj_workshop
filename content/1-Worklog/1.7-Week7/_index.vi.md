@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 7"
-date: 2024-01-01
-weight: 1
+date: 2026-07-13
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Xây dựng quy trình ML tự động với SageMaker Pipelines.
+* Tích hợp AWS Step Functions để điều phối luồng công việc phức tạp.
+* Hiểu vòng đời ML thông qua Model Registry để quản lý phiên bản.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc                                                                                                                                           | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 38  | - Nghiên cứu các thành phần của SageMaker Pipelines (Steps, Parameters, Properties). <br> - Thiết kế pipeline DAG end-to-end.                          | 13/07/2026   | 14/07/2026      | <https://docs.aws.amazon.com/sagemaker/latest/dg/build-and-manage-pipeline.html> |
+| 39  | - Viết code cho các bước Data Processing, Training và Model Evaluation. <br> - Tạo pipeline và thực thi test run.                                      | 15/07/2026   | 15/07/2026      |
+| 40  | - Khám phá AWS Step Functions để quản lý luồng công việc nhiều bước. <br> - Thiết lập CloudWatch Alarm giám sát lỗi thực thi pipeline.                  | 16/07/2026   | 17/07/2026      |
+| 41  | - Đăng ký mô hình đã đánh giá vào SageMaker Model Registry (Phiên bản 1.0). <br> - Tự động hóa quy trình phê duyệt/từ chối cho triển khai mô hình.     | 18/07/2026   | 19/07/2026      |
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thiết kế thành công SageMaker Pipeline có thể tái sử dụng, điều phối toàn bộ vòng đời ML từ xử lý dữ liệu đến đánh giá mô hình.
+* Có kinh nghiệm thực hành với AWS Step Functions, cho phép thực thi luồng công việc điều kiện phức tạp.
+* Triển khai giám sát và cảnh báo sử dụng CloudWatch, thúc đẩy phát hiện sự cố chủ động trong hệ thống CI/CD.
+* Tận dụng SageMaker Model Registry để lưu trữ, lập phiên bản và quản lý các artifact mô hình một cách tập trung, đảm bảo khả năng truy xuất nguồn gốc và tái tạo.
