@@ -1,57 +1,28 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-08
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Setup and customization of Amazon SageMaker Studio and JupyterLab environments.
+* Develop foundational skills in Exploratory Data Analysis (EDA) and data profiling.
+* Execute data cleaning and preprocessing logic essential for Machine Learning.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task                                                                                                                                                             | Start Date | Completion Date | Reference Material                        |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| 9   | - Onboard and configure SageMaker Domain and user profiles. <br> - Test JupyterLab spaces and create a dedicated project notebook. <br> - Connect SageMaker to the S3 bucket. | 08/06/2026 | 08/06/2026      | <https://docs.aws.amazon.com/sagemaker/>  |
+| 10  | - Load and inspect raw datasets from S3 using Pandas. <br> - Perform initial EDA (statistical summary, missing value analysis, data distribution plots).       | 09/06/2026 | 10/06/2026      |
+| 11  | - Implement data cleaning techniques (imputation, outlier handling, duplicate removal). <br> - Engineer basic features using datetime and categorical transformations. | 11/06/2026 | 12/06/2026      |
+| 12  | - Generate training and validation splits. <br> - Serialize and upload the processed datasets back to S3. <br> - Document the data pipeline logic.              | 13/06/2026 | 14/06/2026      |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully initialized the SageMaker Studio environment and linked it with secure S3 data sources.
+* Performed a thorough EDA process using Pandas and Matplotlib, extracting key insights about data distribution.
+* Implemented an automated Python script for data preprocessing, handling null values and outliers effectively.
+* Published clean, feature-engineered datasets to S3, establishing a strong foundation for model training in Week 3.
