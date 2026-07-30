@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-06-15
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu quy trình đào tạo mô hình bằng thuật toán tích hợp sẵn của SageMaker.
+* Cấu hình, thực thi và giám sát training job với XGBoost và Linear Learner.
+* Xác thực hiệu suất mô hình bằng các chỉ số hồi quy/phân loại trên tập validation.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc                                                                                                                                           | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 16  | - Nghiên cứu và xác định thuật toán tích hợp phù hợp cho bài toán kinh doanh. <br> - Định dạng dữ liệu S3 thành định dạng Protobuf/CSV yêu cầu.          | 15/06/2026   | 16/06/2026      | <https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html> |
+| 17  | - Cấu hình SageMaker Estimator cho XGBoost. <br> - Khởi chạy training job trên instance ml.m5.xlarge. <br> - Giám sát log job trên CloudWatch.        | 17/06/2026   | 17/06/2026      |
+| 18  | - Huấn luyện mô hình baseline thứ hai bằng Linear Learner. <br> - So sánh kết quả và phân tích độ quan trọng của đặc trưng.                             | 18/06/2026   | 19/06/2026      |
+| 19  | - Đánh giá mô hình theo KPI kinh doanh. <br> - Chọn mô hình baseline tốt nhất. <br> - Tài liệu hóa cấu hình đào tạo và kết quả.                       | 20/06/2026   | 21/06/2026      |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nắm vững cú pháp cấu hình của SageMaker Estimator và các yêu cầu đóng gói dữ liệu.
+* Thực thi thành công các training job XGBoost và Linear Learner trên các instance tính toán được quản lý bởi AWS.
+* Triển khai các script đánh giá hiệu suất để tính toán các chỉ số chính (RMSE, R2, Accuracy) cho tác vụ hồi quy và phân loại.
+* Chọn được mô hình baseline tối ưu và chuẩn bị tóm tắt kỹ thuật cho buổi review với nhóm.
