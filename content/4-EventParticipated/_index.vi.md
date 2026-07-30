@@ -6,15 +6,11 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-Trong suốt quá trình thực tập tại chương trình First Cloud AI Journey, tôi đã tích cực tham gia ba sự kiện ý nghĩa do cộng đồng AWS Vietnam và ban tổ chức thực tập triển khai. Những buổi gặp gỡ này không chỉ giúp tôi mở rộng mạng lưới kỹ thuật mà còn mang lại những hiểu biết quý giá về vận hành IT thực tế, tinh thần đồng đội và chuyên môn Cloud. Dưới đây là chi tiết các sự kiện.
+Trong suốt quá trình thực tập tại chương trình First Cloud AI Journey, tôi đã tích cực tham gia ba sự kiện ý nghĩa do cộng đồng AWS Vietnam và ban tổ chức thực tập triển khai. Những buổi gặp gỡ này đã mang lại những hiểu biết quý giá về vận hành IT thực tế, tinh thần đồng đội và chuyên môn Cloud. Dưới đây là chi tiết các sự kiện.
 
-### [Sự kiện 1](4.1-Event1/)  
-**Tên sự kiện:** Chia sẻ lộ trình DevOps: Từ IT Helpdesk đến DevOps tại các tập đoàn lớn  
-
-**Thời gian:** 09:00 - 11:00, ngày 06/06/2026  
-
-**Địa điểm:** Trực tuyến (AWS Chime / Zoom)  
-
+### Sự kiện 1: Chia sẻ lộ trình DevOps: Từ IT Helpdesk đến DevOps tại các tập đoàn lớn
+**Thời gian:** 09:00 - 11:30, ngày 06/06/2026  
+**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hai Triệu, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh  
 **Vai trò:** Người tham dự  
 
 **Mô tả sự kiện:**  
@@ -25,13 +21,9 @@ Tôi đã hiểu rõ hơn về lộ trình nghề nghiệp của vị trí DevOp
 
 ---
 
-### [Sự kiện 2](4.2-Event2/)  
-**Tên sự kiện:** Hội thảo về Công cụ kỹ thuật & Container hóa: Lựa chọn công cụ phù hợp với từng vai trò  
-
+### Sự kiện 2: Hội thảo về Công cụ kỹ thuật & Container hóa: Lựa chọn công cụ phù hợp với từng vai trò
 **Thời gian:** 09:00 - 11:30, ngày 13/06/2026  
-
-**Địa điểm:** Trực tuyến (AWS Chime / Zoom)  
-
+**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hai Triệu, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh  
 **Vai trò:** Người tham dự  
 
 **Mô tả sự kiện:**  
@@ -42,13 +34,9 @@ Giúp tôi hiểu thực tế cách các công cụ ML tôi sử dụng (ví d�
 
 ---
 
-### [Sự kiện 3](4.3-Event3/)  
-**Tên sự kiện:** Giao lưu đấu kiến thức AWS giữa các nhóm (AWS Knowledge Battle)  
-
-**Thời gian:** 14:00 - 16:30, ngày 20/06/2026  
-
-**Địa điểm:** Trực tuyến (AWS Chime / Zoom)  
-
+### Sự kiện 3: Giao lưu đấu kiến thức AWS giữa các nhóm (AWS Knowledge Battle)
+**Thời gian:** 09:00 - 11:30, ngày 20/06/2026  
+**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hai Triệu, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh  
 **Vai trò:** Thành viên đội thi và người tranh tài  
 
 **Mô tả sự kiện:**  
