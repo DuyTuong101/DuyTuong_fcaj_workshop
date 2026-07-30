@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+date: 2026-07-20
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Giới thiệu Amazon SageMaker Feature Store để quản lý đặc trưng tập trung.
+* Sử dụng SageMaker Data Wrangler để phân tích và biến đổi dữ liệu trực quan.
+* Kỹ thuật đặc trưng nâng cao và cộng tác xuyên nhóm trên các đặc trưng chung.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc                                                                                                                                           | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 42  | - Tìm hiểu các khái niệm SageMaker Feature Store (Offline và Online stores). <br> - Thiết kế cấu trúc Feature Group cho dữ liệu dự án.                  | 20/07/2026   | 21/07/2026      | <https://docs.aws.amazon.com/sagemaker/latest/dg/feature-store.html> |
+| 43  | - Đưa các đặc trưng đã kỹ thuật vào Feature Store. <br> - Truy vấn Offline Feature Store bằng Athena để kiểm tra tính nhất quán dữ liệu.              | 22/07/2026   | 22/07/2026      |
+| 44  | - Học cách sử dụng SageMaker Data Wrangler. <br> - Tạo luồng dữ liệu để làm sạch và biến đổi trực quan một tập dữ liệu thô lớn mà không cần viết code. | 23/07/2026   | 24/07/2026      |
+| 45  | - Xuất luồng Data Wrangler thành bước SageMaker Pipeline. <br> - Cộng tác với các nhóm chức năng chéo để chuẩn hóa các định nghĩa đặc trưng chung.      | 25/07/2026   | 26/07/2026      |
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu được lợi ích và chi tiết triển khai của SageMaker Feature Store cho việc quản lý phiên bản và chia sẻ dữ liệu.
+* Tạo và đưa dữ liệu thành công vào Online và Offline Feature Group để phục vụ suy luận thời gian thực và theo lô.
+* Có được kinh nghiệm đáng kể trong việc chuẩn bị dữ liệu ML ít code sử dụng SageMaker Data Wrangler.
+* Hài hòa các định nghĩa đặc trưng với nhóm, thiết lập một "nguồn sự thật" thống nhất cho các đầu vào mô hình ML.
