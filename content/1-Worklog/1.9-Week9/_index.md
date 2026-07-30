@@ -1,57 +1,28 @@
 ---
 title: "Week 9 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-07-27
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Integration of all individual components into a cohesive end-to-end ML system.
+* Optimization of training costs through the utilization of SageMaker Spot Instances.
+* Deep code review, security auditing, and performance benchmarking.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task                                                                                                                                                             | Start Date | Completion Date | Reference Material                        |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| 46  | - Merge individual SageMaker Pipelines and Feature Store strategies into a unified architecture. <br> - Conduct extensive code review sessions with the mentor.      | 27/07/2026 | 28/07/2026      |
+| 47  | - Implement SageMaker Spot Instances for training to reduce AWS costs by up to 70%. <br> - Write a checkpointing strategy to handle spot interruption gracefully.  | 29/07/2026 | 29/07/2026      | <https://docs.aws.amazon.com/sagemaker/latest/dg/model-spot-training.html> |
+| 48  | - Perform security auditing on IAM roles and S3 access policies. <br> - Establish a performance benchmarking suite for the entire pipeline.                      | 30/07/2026 | 31/07/2026      |
+| 49  | - Prepare and run an end-to-end demonstration for the mentor team. <br> - Gather feedback and refine the system's final logic.                                  | 01/08/2026 | 02/08/2026      |
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed the full system integration, demonstrating a stable, fault-tolerant end-to-end ML pipeline.
+* Efficiently reduced training expenses by configuring Spot Instances and implementing checkpoint mechanisms.
+* Ensured the project met enterprise security standards through rigorous IAM and S3 policy reviews.
+* Achieved a major milestone by successfully demonstrating the comprehensive system to the management team, receiving valuable operational feedback.
