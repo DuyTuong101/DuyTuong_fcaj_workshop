@@ -6,15 +6,11 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-Throughout my internship at the First Cloud AI Journey program, I actively participated in three enriching events organized by the AWS Vietnam community and the internship team. These events were not only opportunities to expand my technical network but also provided invaluable insights into real-world IT operations, team collaboration, and cloud expertise. Below is a detailed breakdown of each event.
+Throughout my internship at the First Cloud AI Journey program, I actively participated in three enriching events organized by the AWS Vietnam community and the internship team. These events provided invaluable insights into real-world IT operations, team collaboration, and cloud expertise. Below is a detailed breakdown of each event.
 
-### [Event 1](4.1-Event1/)  
-**Event Name:** DevOps Career Path Sharing: From IT Helpdesk to Enterprise DevOps  
-
-**Date & Time:** 09:00 - 11:00, June 6, 2026  
-
-**Location:** Online Meeting (AWS Chime / Zoom)  
-
+### Event 1: DevOps Career Path Sharing: From IT Helpdesk to Enterprise DevOps
+**Date & Time:** 09:00 - 11:30 AM, June 6, 2026  
+**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 **Role:** Attendee  
 
 **Event Description:**  
@@ -25,13 +21,9 @@ Gained a clear understanding of the DevOps career roadmap and the critical soft 
 
 ---
 
-### [Event 2](4.2-Event2/)  
-**Event Name:** Tech Tools & Containerization Workshop: Matching Tools to Roles  
-
-**Date & Time:** 09:00 - 11:30, June 13, 2026  
-
-**Location:** Online Meeting (AWS Chime / Zoom)  
-
+### Event 2: Tech Tools & Containerization Workshop: Matching Tools to Roles
+**Date & Time:** 09:00 - 11:30 AM, June 13, 2026  
+**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 **Role:** Attendee  
 
 **Event Description:**  
@@ -42,14 +34,10 @@ Provided me with a practical understanding of how the tools I use for ML (like S
 
 ---
 
-### [Event 3](4.3-Event3/)  
-**Event Name:** AWS Knowledge Battle: Inter-group Competition  
-
-**Date & Time:** 14:00 - 16:30, June 20, 2026  
-
-**Location:** Online Meeting (AWS Chime / Zoom)  
-
-**Role:** Attendee  
+### Event 3: AWS Knowledge Battle: Inter-group Competition
+**Date & Time:** 09:00 - 11:30 AM, June 20, 2026  
+**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+**Role:** Attendee 
 
 **Event Description:**  
 An exciting and fast-paced knowledge competition held between various intern teams. Teams competed against each other in a quiz format covering a wide range of AWS topics, including core services (EC2, S3, VPC), security best practices, serverless architectures, and cost optimization strategies. The competition required rapid collaboration and quick thinking under pressure.
