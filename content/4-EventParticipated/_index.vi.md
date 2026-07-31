@@ -21,4 +21,4 @@ Trong suốt quá trình thực tập tại chương trình First Cloud AI Journ
 ### [Sự kiện 3: Giao lưu đấu kiến thức AWS giữa các nhóm](4.3-Event3/)  
 **Thời gian:** 09:00 - 11:30, ngày 20/06/2026  
 **Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hai Triệu, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh  
-**Vai trò:** Thành viên đội thi và người tranh tài  
+**Vai trò:** Người tham dự 
