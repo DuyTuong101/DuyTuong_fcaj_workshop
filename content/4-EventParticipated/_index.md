@@ -21,4 +21,4 @@ Throughout my internship at the First Cloud AI Journey program, I actively parti
 ### [Event 3: AWS Knowledge Battle: Inter-group Competition](4.3-Event3/)  
 **Date & Time:** 09:00 - 11:30 AM, June 20, 2026  
 **Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
-**Role:** Team Member & Competitor  
+**Role:** Attendee
