@@ -1,5 +1,5 @@
 ---
-title: "5.3. Building the Data Pipeline"
+title: "Building the Data Pipeline"
 date: 2026-07-31
 weight: 3
 chapter: false
