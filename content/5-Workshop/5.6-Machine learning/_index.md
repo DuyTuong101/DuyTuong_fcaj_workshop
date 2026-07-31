@@ -1,3 +1,10 @@
+---
+title: "Machine Learning"
+date: 2026-06-05
+weight: 4
+chapter: false
+pre: " <b> 5.6. </b> "
+---
 # ML Component: PM2.5 Time-Series Forecasting with Amazon SageMaker DeepAR
 
 **Project:** Local AQI Forecasting & Alert System
