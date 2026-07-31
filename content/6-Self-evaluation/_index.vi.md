@@ -1,9 +1,9 @@
 ---
 title: "Tự đánh giá"
 date: 2026-06-05
-weight: 5
+weight: 6
 chapter: false
-pre: " <b> 5. </b> "
+pre: " <b> 6. </b> "
 ---
 
 Trong suốt quá trình thực tập tại **First Cloud AI Journey (AWS Vietnam)** từ ngày **05/06/2026** đến ngày **15/08/2026**, tôi đã có cơ hội áp dụng những kiến thức Machine Learning đã học tại trường vào một môi trường làm việc thực tế mang tính sản xuất cao.
