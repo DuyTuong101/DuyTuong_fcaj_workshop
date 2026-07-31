@@ -4,7 +4,7 @@ title: "Chính sách truy cập và phân quyền IAM"
 date: 2026-07-31
 weight: 5
 chapter: false
-pre: " <b> 5. </b> "
+pre: " <b> 5.8 </b> "
 --------------------
 
 ## Tổng quan
